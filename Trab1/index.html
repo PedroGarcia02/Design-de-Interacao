@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Interativo</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function mudarTitulo(value) {
+            document.getElementById("Titulo").innerHTML = value;
+        }
+
+        function mudarTexto(value) {
+            document.getElementById("Texto").innerHTML = value;
+        }
+
+        function mudarCor(value) {
+            let Cor;
+            if (value == "1") {
+                Cor = "white";
+            };
+
+            if (value == "2") {
+                Cor = "blue";
+            };
+
+            if (value == "3") {
+                Cor = "red";
+            };
+
+            document.getElementById("card-body").style.backgroundColor = Cor;
+        }
+
+        function mudarImagem(value) {
+            let Imagem;
+            if (value == "1") {
+                Imagem = "Imagens/natal.avif";
+            };
+
+            if (value == "2") {
+                Imagem = "Imagens/pascoa.avif";
+            };
+
+            if (value == "3") {
+                Imagem = "Imagens/namorados.webp";
+            };
+
+            document.getElementById("Imagem").src = Imagem;
+        }
+    </script>
+
+    <div class="container" id="containerForm">
+        <h2>Formulário</h2>
+        <form>
+
+            <div class="mb-3">
+                <label for="InputTitulo" class="form-label">Titulo</label>
+                <input type="text" value="Cartão" class="form-control" id="InputTitulo"
+                    onchange="mudarTitulo(this.value)">
+            </div>
+
+            <div class="mb-3">
+                <label for="InputTexto" class="form-label">Texto</label>
+                <input type="text" value="Tenha um feliz natal" class="form-control" id="InputTexto"
+                    onchange="mudarTexto(this.value)">
+            </div>
+
+            <div class="mb-3">
+                <label for="selectCor" class="form-label">Cor de Fundo</label>
+                <select id="selectCor" class="form-select" onchange="mudarCor(this.value)">
+                    <option value="1">Branco</option>
+                    <option value="2">Azul</option>
+                    <option selected value="3">Vermelho</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="selectFigura" class="form-label">Figura</label>
+                <select id="selectFigura" class="form-select" onchange="mudarImagem(this.value)">
+                    <option selected value="1">Natal</option>
+                    <option value="2">Pascoa</option>
+                    <option value="3">Dia dos Namorados</option>
+                </select>
+            </div>
+
+
+
+
+        </form>
+    </div>
+
+    <div class="container" id="containerCard">
+
+        <h2>Cartão</h2>
+
+        <div class="card" style="width: 18rem;">
+            <img id="Imagem" src="Imagens/natal.avif" height="500px" class="card-img-top" alt="Imagem">
+            <div class="card-body" id="card-body">
+                <h5 id="Titulo" class="card-title">Cartão</h5>
+                <p id="Texto" class="card-text">Tenha um feliz natal</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
