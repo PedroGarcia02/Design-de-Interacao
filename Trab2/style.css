@@ -19,25 +19,25 @@ body {
 
 .invader {
 	border-radius: 10px;
-	background-image:url(/imagens/invader.PNG);
+	background-image:url(imagens/invader.png);
 	background-size: 50px;
 	background-repeat: no-repeat;
 }
 
 .shooter {
-	background-image:url(/imagens/shooter.PNG);
+	background-image:url(imagens/shooter.png);
 	background-size: 50px;
 	background-repeat: no-repeat;
 }
 
 .laser {
-	background-image:url(/imagens/lazer.WEBP);
+	background-image:url(imagens/lazer.webp);
 	background-size: 50px;
 	background-repeat: no-repeat;
 }
 
 .boom {
-	background-image:url(/imagens/boom.PNG);
+	background-image:url(imagens/boom.png);
 	background-size: 50px;
 	background-repeat: no-repeat;
 }
