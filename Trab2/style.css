@@ -19,7 +19,7 @@ body {
 
 .invader {
 	border-radius: 10px;
-	background-image:url(/imagens/invader.png);
+	background-image:url(invader.png);
 	background-size: 50px;
 	background-repeat: no-repeat;
 }
